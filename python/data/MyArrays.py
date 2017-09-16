@@ -21,3 +21,15 @@ class MyArrays(object):
             elif num > search_array[mid]:
                 left = mid + 1
         return False
+
+    def bubble_sort(self, l):
+            print(l)
+            for x in range(0, len(l)):
+                print l
+                for i in range(0, len(l)-1):
+                    if l[i] > l[i+1]:
+                        t = l[i]
+                        l[i] = l[i+1]
+                        l[i+1] = t
+            print(l)
+            return l

@@ -51,3 +51,8 @@ class MyMath(object):
             result = result + 1.0/self.factorial(counter)
             counter = counter + 1
         return float(result)
+
+    def  factorial_rec(self, num):
+        if num ==0:
+            return 1
+        return num*self.factorial_rec(num-1)

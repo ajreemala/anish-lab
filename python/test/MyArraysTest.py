@@ -14,6 +14,21 @@ class MyArraysTest(unittest.TestCase):
         self.assertEquals(MyArrays().bsearch(test_vector,19), True)
         self.assertEquals(MyArrays().bsearch(test_vector,31), False)
 
+    def test_bubble_sort(self):
+        v = [24, 65, 111, 19, 21, 232, 56, 478, 89]
+        MyArrays().bubble_sort(v)
+        i = 0
+        for x in sorted(v):
+            self.assertEquals(v[i], x)
+            i += 1
+    def test_bubble_sort1(self):
+        v = [5, 4, 3, 2, 1, 0, 7]
+        MyArrays().bubble_sort(v)
+        i = 0
+        for x in sorted(v):
+            self.assertEquals(v[i], x)
+            i += 1
+
 
 if __name__ == '__main__':
     unittest.main()

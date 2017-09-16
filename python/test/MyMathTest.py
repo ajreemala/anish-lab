@@ -34,12 +34,29 @@ class MyMathTest(unittest.TestCase):
         self.assertEquals(MyMath().factorial(4), 24)
         self.assertEquals(MyMath().factorial(0), 1)
 
+    def test_factorial_rec(self):
+        self.assertEquals(MyMath().factorial_rec(2), 2)
+        self.assertEquals(MyMath().factorial_rec(3), 6)
+        self.assertEquals(MyMath().factorial_rec(4), 24)
+        self.assertEquals(MyMath().factorial_rec(0), 1)
+
     def test_taylor_series(self):
         self.assertAlmostEqual(MyMath().taylor_series(0), 1)
         self.assertAlmostEqual(MyMath().taylor_series(1), 2)
         self.assertAlmostEqual(MyMath().taylor_series(2), 2.5)
         self.assertAlmostEqual(MyMath().taylor_series(3), 2.666666666666)
 
+    def test_fibonacci(self):
+        self.assertAlmostEqual(MyMath().fibonacci(0), 1)
+        self.assertAlmostEqual(MyMath().fibonacci(1), 1)
+        self.assertAlmostEqual(MyMath().fibonacci(2), 2)
+        self.assertAlmostEqual(MyMath().fibonacci(3), 3)
+        self.assertAlmostEqual(MyMath().fibonacci(4), 5)
+        self.assertAlmostEqual(MyMath().fibonacci(5), 8)
+        self.assertAlmostEqual(MyMath().fibonacci(6), 13)
+        self.assertAlmostEqual(MyMath().fibonacci(7), 21)
+        self.assertAlmostEqual(MyMath().fibonacci(8), 34)
+    
 
 if __name__ == '__main__':
     unittest.main()
