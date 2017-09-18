@@ -56,3 +56,8 @@ class MyMath(object):
         if num ==0:
             return 1
         return num*self.factorial_rec(num-1)
+
+    def fibonacci(self, num):
+        if num == 0 or num == 1 :
+            return 1
+        return self.fibonacci(num-1)+self.fibonacci(num-2)
